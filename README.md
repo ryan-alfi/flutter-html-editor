@@ -2,9 +2,6 @@
 
 Flutter HTML Editor is a text editor for android and iOS to help write WYSIWYG HTML code based on the Summernote javascript wrapper. with this library you can insert images into the text editor
 
-![demo example](https://github.com/xrb21/flutter-html-editor/blob/master/screenshoot/flutter_html_editor.gif)  ![demo android](https://github.com/xrb21/flutter-html-editor/blob/master/screenshoot/sc.jpeg)   ![demo ios](https://github.com/xrb21/flutter-html-editor/blob/master/screenshoot/sc_iphone.png)
-
-
 ## Setup
 
 add ```html_editor: ^1.0.1``` as deppendecy to pubspec.yaml

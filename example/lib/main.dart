@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               HtmlEditor(
                 hint: "Your text here...",
-                //value: "text content initial, if any",
+                showBottomToolbar: false,
                 key: keyEditor,
                 height: 400,
               ),
@@ -61,14 +61,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     FlatButton(
                       color: Colors.blueGrey,
-                      onPressed: (){
+                      onPressed: () {
                         setState(() {
                           keyEditor.currentState.setEmpty();
                         });
                       },
-                      child: Text("Reset", style: TextStyle(color: Colors.white)),
+                      child:
+                          Text("Reset", style: TextStyle(color: Colors.white)),
                     ),
-                    SizedBox(width: 16,),
+                    SizedBox(
+                      width: 16,
+                    ),
                     FlatButton(
                       color: Colors.blue,
                       onPressed: () async {
@@ -77,7 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           result = txt;
                         });
                       },
-                      child: Text("Submit", style: TextStyle(color: Colors.white),),
+                      child: Text(
+                        "Submit",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
