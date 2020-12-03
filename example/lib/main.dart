@@ -53,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 showBottomToolbar: false,
                 key: keyEditor,
                 height: 400,
+                returnContent: _submitContent,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -76,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.blue,
                       onPressed: () async {
                         final txt = await keyEditor.currentState.getText();
+                        print('isi $txt');
                         setState(() {
                           result = txt;
                         });
@@ -98,5 +100,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  _submitContent(String content) {
+    print('isi submit ${content}');
   }
 }

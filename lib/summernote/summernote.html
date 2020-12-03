@@ -16,9 +16,9 @@
     <script>
         $('#summernote').summernote({
             placeholder: "&nbsp;",
-            tabsize: 2,
+            tabsize: 1,
             toolbar: [
-                ['style', ['style']],
+                // ['style', ['style']],
                 ['font', ['bold', 'underline', 'italic']]
                 // ['color', ['color']],
                 // ['para', ['ul', 'ol', 'paragraph']],
@@ -27,6 +27,10 @@
             ],
             disableGrammar: false,
             spellCheck: false
+        });
+        $("#summernote").on("summernote.enter", function(we, e) {
+            $(this).summernote("pasteHTML", "<br><br>");
+            e.preventDefault();
         });
     </script>
     <style>
