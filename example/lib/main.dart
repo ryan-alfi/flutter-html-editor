@@ -60,8 +60,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    FlatButton(
-                      color: Colors.blueGrey,
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        primary: Colors.blueGrey,
+                      ),
                       onPressed: () {
                         setState(() {
                           keyEditor.currentState.setEmpty();
@@ -73,8 +75,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(
                       width: 16,
                     ),
-                    FlatButton(
-                      color: Colors.blue,
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        primary: Colors.blue,
+                      ),
                       onPressed: () async {
                         final txt = await keyEditor.currentState.getText();
                         print('isi $txt');
@@ -103,6 +107,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _submitContent(String content) {
-    print('isi submit ${content}');
+    print('isi submit $content');
   }
 }
